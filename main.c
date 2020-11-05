@@ -8,12 +8,13 @@ int main(void)
 	int i;
 	int grade[5];
 	int sum=0;
-	
+	int *ptr;
+	ptr=grade;
 	for(i=0;i<5;i++)
 	{
 		printf("input value (%i)=",i);
-		scanf("%d",&grade[i]);
-		sum+=grade[i];
+		scanf("%d",(ptr+i));
+		sum+=*(ptr+i);
 	}
 	for(i=0;i<5;i++)
 		printf("grade[%d]=%d\n",i,grade[i]);

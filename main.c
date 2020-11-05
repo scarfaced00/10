@@ -5,8 +5,7 @@
 
 int main(int argc, char *argv[]) {
 	int i=10;
-	char c='a';
-	int *iptr;
+	char c=69;
 	float f=12.3;
 	
 	printf("i: %i%p\n",i,&i);

@@ -5,12 +5,16 @@
 
 int main(int argc, char *argv[]) {
 	int i=10;
-	char c=69;
+	char c='a';
+	int *iptr=&i;
+	char *cptr;
+	cptr=&c;
+	int *iptr2;
+	iptr2=iptr;
 	float f=12.3;
 	
-	printf("i: %i%p\n",i,&i);
-	printf("c:%i%p\n",c,&c);
-	printf("f:%i%p]n",f,&f);
-	
+	printf("i: %p\n%p (size:%i)\n",iptr,&i,sizeof(iptr));
+	printf("c:%p\n%p (size:%i)\n",cptr,&c,sizeof(cptr));
+	printf("iptr2: %p,%i\n",iptr2,*iptr2);
 	return 0;
 }
